@@ -5,3 +5,5 @@ yfinance
 python-dotenv
 supabase
 pydantic
+joblib
+scikit-learn
