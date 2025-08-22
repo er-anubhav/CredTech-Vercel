@@ -71,19 +71,24 @@ export const ScoreCard = ({ score, loading = false }: ScoreCardProps) => {
               {score.score}
             </div>
             <div className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBg(score.score)} ${getScoreColor(score.score)}`}>
-              {score.score >= 750 ? 'Excellent' : score.score >= 650 ? 'Good' : 'Fair'}
+              {score.score >= 90 ? 'Excellent'
+                : score.score >= 75 ? 'Very Good'
+                  : score.score >= 60 ? 'Good'
+                    : score.score >= 45 ? 'Fair'
+                      : score.score >= 30 ? 'Poor'
+                        : 'Very Poor'}
             </div>
           </div>
-          
+
           <div className="bg-gradient-score p-4 rounded-lg border border-border">
             <h4 className="font-medium text-card-foreground mb-2 flex items-center gap-2">
               <Info className="h-4 w-4" />
-              
               Explanation
             </h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {score.explanation}
-              </p>
+            <p
+              className="text-sm text-muted-foreground leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: score.html_summary || score.explanation.replace(/\n/g, '<br>') }}
+            />
           </div>
         </div>
       </CardContent>

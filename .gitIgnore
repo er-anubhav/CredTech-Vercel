@@ -1,0 +1,16 @@
+# Backend virtual environment
+myenv
+
+# Backend Python cache
+__pycache__
+
+# Frontend node modules
+node_modules
+.env
+
+# Optional system files
+.DS_Store
+Thumbs.db
+
+# Optional log files
+*.log

@@ -12,6 +12,7 @@ export interface CreditScore {
   score: number;
   explanation: string;
   feature_contributions: Record<string, number>;
+  html_summary?: string;
 }
 
 export interface ScoreHistory {
