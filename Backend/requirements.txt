@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+requests
+yfinance
+python-dotenv
+supabase
+pydantic
